@@ -1,0 +1,102 @@
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  
+}
+body{
+  background-color: white;
+}
+/* Global container */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+
+/* Grid layout for movie cards */
+.grid-container {
+  display: grid;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Responsive Grid Layout */
+@media (max-width: 767px) {
+  /* Mobile - 1 column */
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Tablet - 2 columns */
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1025px) {
+  /* Desktop - 4 columns */
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Card styling */
+.card {
+  text-decoration: none;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+}
+.card img{
+  object-fit:fill;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Movie detail card */
+.detail-card {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.detail-card img{
+  object-fit:contain;
+}
+
+/* Back link */
+.back-link {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Load More Button */
+.load-more {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: #007bff;
+  color: white;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 20px;
+}
+
+.load-more:hover {
+  background: #0056b3;
+}
